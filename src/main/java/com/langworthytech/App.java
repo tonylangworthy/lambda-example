@@ -5,7 +5,7 @@ import java.util.List;
 
 public class App {
 
-	//this should only appear in kentdev
+	
     public static void main(String[] args) {
 
         Vehicle mazda = new Vehicle("2008", "Mazda", "6", "i Sport");
