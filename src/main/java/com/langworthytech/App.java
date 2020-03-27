@@ -5,7 +5,7 @@ import java.util.List;
 
 public class App {
 
-    // This should only appear in dev branch
+	
     public static void main(String[] args) {
 
         Vehicle mazda = new Vehicle("2008", "Mazda", "6", "i Sport");
@@ -40,6 +40,8 @@ public class App {
 //            }
         };
 
+        DisplayFriendlyName newVarName = (bugger) -> {return "Tony says string";};
+        System.out.println(newVarName.display(equinox));
 
         String vehicleName = displayFriendlyName.display(mazda);
         System.out.println(vehicleName);
