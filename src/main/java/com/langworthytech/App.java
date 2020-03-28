@@ -112,8 +112,8 @@ public class App {
         //Alex is awesome
         
         String filterModel = "Impala";
-        List<Vehicle> varMake = vehicleList.stream().filter(vehicle -> {return vehicle.getModel().equals(filterModel);}).collect(Collectors.toList());
-        System.out.println("printing just Model  " + varMake);
+        List<Vehicle> varModel = vehicleList.stream().filter(vehicle -> {return vehicle.getModel().equals(filterModel);}).collect(Collectors.toList());
+        System.out.println("printing just Model  " + varModel);
         
         
         
