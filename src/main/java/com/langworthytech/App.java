@@ -17,7 +17,8 @@ public class App {
         List<Vehicle> vehicleList = new ArrayList<>();
         vehicleList.add(new Vehicle("2002", "Chevrolet", "Impala", "LS"));
         vehicleList.add(new Vehicle("2012", "Ford", "Focus", "SE"));
-        vehicleList.add(new Vehicle("2010", "Ford", "Fusion", "SE"));
+        vehicleList.add(new Vehicle("2002", "Ford", "Fusion", "SE"));
+        vehicleList.add(new Vehicle("2002", "Ford", "Explorer", "SE"));
         vehicleList.add(new Vehicle("2007", "Chevrolet", "Malibu", "LT"));
         vehicleList.add(new Vehicle("2002", "Chevrolet", "Malibu", "Classic"));
         vehicleList.add(mazda);
@@ -89,16 +90,22 @@ public class App {
         System.out.println("printing year:  " + newVar.toString());
         
         
-        String filterMake = "Chevrolet";
+        String filterMake = "Ford";
         List<Vehicle> varMakeFilter = vehicleList.stream().filter(vehicle -> {
         	return vehicle.getMake().equals(filterMake);
         	}).collect(Collectors.toList());
         
         System.out.println("printing make:  " + varMakeFilter.toString());
         
+        //now let's method chain to filter by make and year
+        List<Vehicle> varMakeYearFilter = vehicleList.stream().filter(vehicle ->{
+        	return vehicle.getYear().equals(filterYear);
+        	
+        	
+        }).filter(vehicle -> {return vehicle.getMake().equals(filterMake);}).collect(Collectors.toList());
+        		
         
-        
-        
+        System.out.println("printing make and year" + varMakeYearFilter);
         
         
 
