@@ -66,4 +66,15 @@ public class Vehicle {
     public void setTrim(String trim) {
         this.trim = trim;
     }
+
+	@Override
+	public String toString() {
+		return "Vehicle [year=" + year + ", make=" + make + ", model=" + model + ", trim=" + trim + "]";
+	}
+    
+    
+    
+    
+    
+    
 }

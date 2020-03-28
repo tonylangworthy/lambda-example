@@ -1,7 +1,10 @@
 package com.langworthytech;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class App {
 
@@ -74,9 +77,22 @@ public class App {
         System.out.println("\n----------------------------------------------\n");
 
         // ----------------------------------------------------------------------------------
+        
+        
+        
+        
+        
+        
 
         // lambda to iterate and display all vehicles
         vehicleList.forEach((vehicle -> System.out.println(displayFriendlyName.display(vehicle))));
+        
+        String filterYear = "2002";
+        List<Vehicle> newVar = vehicleList.stream().filter(vehicle -> {return vehicle.getYear().equals(filterYear);}).collect(Collectors.toList());
+        
+        System.out.println("printing:  " + newVar.toString());
+        
+        
 
     }
 }
