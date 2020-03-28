@@ -15,6 +15,8 @@ public class App {
         Vehicle equinox = new Vehicle("2013", "Chevrolet", "Equinox", "LT");
 
         List<Vehicle> vehicleList = new ArrayList<>();
+//        year, make, model, trim
+
         vehicleList.add(new Vehicle("2002", "Chevrolet", "Impala", "LS"));
         vehicleList.add(new Vehicle("2012", "Ford", "Focus", "SE"));
         vehicleList.add(new Vehicle("2002", "Ford", "Fusion", "SE"));
@@ -107,7 +109,15 @@ public class App {
         
         System.out.println("printing make and year" + varMakeYearFilter);
         
-        //Alex is awesome very
+        //Alex is awesome
+        
+        String filterModel = "Impala";
+        List<Vehicle> varMake = vehicleList.stream().filter(vehicle -> {return vehicle.getModel().equals(filterModel);}).collect(Collectors.toList());
+        System.out.println("printing just Model  " + varMake);
+        
+        
+        
+        
         
         
         
