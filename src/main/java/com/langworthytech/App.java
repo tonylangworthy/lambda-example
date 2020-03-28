@@ -79,10 +79,6 @@ public class App {
         // ----------------------------------------------------------------------------------
         
         
-        
-        
-        
-        
 
         // lambda to iterate and display all vehicles
         vehicleList.forEach((vehicle -> System.out.println(displayFriendlyName.display(vehicle))));
@@ -90,7 +86,19 @@ public class App {
         String filterYear = "2002";
         List<Vehicle> newVar = vehicleList.stream().filter(vehicle -> {return vehicle.getYear().equals(filterYear);}).collect(Collectors.toList());
         
-        System.out.println("printing:  " + newVar.toString());
+        System.out.println("printing year:  " + newVar.toString());
+        
+        
+        String filterMake = "Chevrolet";
+        List<Vehicle> varMakeFilter = vehicleList.stream().filter(vehicle -> {
+        	return vehicle.getMake().equals(filterMake);
+        	}).collect(Collectors.toList());
+        
+        System.out.println("printing make:  " + varMakeFilter.toString());
+        
+        
+        
+        
         
         
 
